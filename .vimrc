@@ -22,3 +22,15 @@ set cursorcolumn
 
 "Set tab width to 2 columns.
 set tabstop=2
+
+"Ignore capital letters during search"
+set ignorecase
+
+"While searching file incrementally highlight matching characters"
+set incsearch
+
+"Show mode on last line"
+set showmode
+
+"Do not let cursor scroll below or above N number of lines when scrolling"
+set scrolloff=10
