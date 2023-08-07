@@ -21,7 +21,13 @@ set cursorline
 set cursorcolumn
 
 "Set tab width to 2 columns.
-set tabstop=2
+set tabstop=4
+set shiftwidth=4
+
+"use actual tab chars instead of spaces
+set noexpandtab
+set list
+set listchars=tab:>-
 
 "Ignore capital letters during search"
 set ignorecase
