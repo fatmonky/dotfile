@@ -48,3 +48,54 @@ inoremap <c-j> <Esc>:m .+1<CR>==gi
 inoremap <c-k> <Esc>:m .-2<CR>==gi
 vnoremap <c-j> :m '>+1<CR>gv=gv
 vnoremap <c-k> :m '<-2<CR>gv=gv
+
+"setting 42 user and mail id
+let g:user42= 'pteh'
+let g:mail42 = 'pteh@student.42.fr'
+
+
+"PLUGINS  ---------------------------------------------------------{{{{
+call plug#begin('~/.vim/plugged')
+
+	Plug '42Paris/42header'
+	Plug 'preservim/nerdtree'
+"	Plug 'dense-analysis/ale'
+
+call plug#end()
+
+"  }}}
+
+" STATUS LINE -----------------------------------------------------{{{
+
+" Clear status line when vimrc is reloaded.
+set statusline=
+
+" Status line left side.
+set statusline+=\ %F\ %M\ %Y\ %R
+
+" Use a divider to separate the left side from the right side.
+set statusline+=%=
+
+" Status line right side.
+set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
+
+" }}}
+
+" Remap NERDTree toggle
+map <C-t> :NERDTreeToggle<CR>
+
+" Open NERDTree automatically when vim starts
+autocmd vimenter * NERDTree | wincmd p
+
+" Configure tree settings
+let NERDTreeShowHidden = 1
+let g:NERDTreeDirArrows = 0
+let g:NERDTreeNodeDelimiter = "\u00a0"
+
+" Close vim if NERDTree is the only remaining window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Define NERDTree ignore
+let NERDTreeIgnore = ['__pycache__', '\.pyc$', '\.o$', '\.so$', '\.a$', '\.swp', '*\.swp', '\.swo', '\.swn', '\.swh', '\.swm', '\.swl', '\.swk', '\.sw*$', '[a-zA-Z]*egg[a-zA-Z]*', '.DS_Store']
+
+
