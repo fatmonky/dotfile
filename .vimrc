@@ -27,7 +27,7 @@ set shiftwidth=4
 "use actual tab chars instead of spaces
 set noexpandtab
 set list
-set listchars=tab:>-
+set listchars=tab:>_
 
 "Ignore capital letters during search"
 set ignorecase
@@ -40,6 +40,13 @@ set showmode
 
 "Do not let cursor scroll below or above N number of lines when scrolling"
 set scrolloff=10
+
+"Allow mouse scroll
+set mouse=a
+
+" set colorscheme
+"colorscheme habamax #habamax is already installed
+autocmd vimenter * ++nested colorscheme gruvbox
 
 "mappings to move chunks of lines up or down with Ctrl-j & Ctrl -k"
 nnoremap <c-j> :m .+1<CR>==
@@ -59,6 +66,7 @@ call plug#begin('~/.vim/plugged')
 
 	Plug '42Paris/42header'
 	Plug 'preservim/nerdtree'
+	Plug 'morhetz/gruvbox'
 "	Plug 'dense-analysis/ale'
 
 call plug#end()
