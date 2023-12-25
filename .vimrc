@@ -47,6 +47,7 @@ set mouse=a
 " set colorscheme
 "colorscheme habamax #habamax is already installed
 autocmd vimenter * ++nested colorscheme gruvbox
+set background=dark
 
 "mappings to move chunks of lines up or down with Ctrl-j & Ctrl -k"
 nnoremap <c-j> :m .+1<CR>==
