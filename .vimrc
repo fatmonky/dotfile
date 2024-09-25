@@ -69,6 +69,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdtree'
 	Plug 'morhetz/gruvbox'
 "	Plug 'dense-analysis/ale'
+	Plug 'elixir-editors/vim-elixir'
 	Plug 'fatih/vim-go'
 	Plug 'Valloric/YouCompleteMe'
 	Plug 'junegunn/fzf'
