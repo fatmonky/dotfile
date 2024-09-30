@@ -71,7 +71,7 @@ call plug#begin('~/.vim/plugged')
 "	Plug 'dense-analysis/ale'
 	Plug 'elixir-editors/vim-elixir'
 	Plug 'fatih/vim-go'
-	Plug 'Valloric/YouCompleteMe'
+"	Plug 'Valloric/YouCompleteMe'
 	Plug 'junegunn/fzf'
 
 call plug#end()
